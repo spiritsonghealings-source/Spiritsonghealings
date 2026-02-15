@@ -1,90 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Dancing+Script&display=swap');
+
 :root {
-    --gold: #d4af37;
-    --midnight: #0f0c29;
-    --spirit-white: #f8f9ff;
-    --glow: 0 0 15px rgba(212, 175, 55, 0.4);
+    /* Prismatic Palette */
+    --gold: #f3d27a;
+    --soft-pink: #fdf2f8;
+    --morning-sky: #e0f2fe;
+    --lavender-mist: #f5f3ff;
+    --text-sepia: #5d4d42;
 }
 
 body {
-    background: var(--midnight);
-    color: var(--spirit-white);
-    font-family: 'Garamond', serif;
+    /* Intricate Mesh Gradient Background */
+    background: radial-gradient(at 0% 0%, #fff8e1 0%, transparent 50%),
+                radial-gradient(at 100% 0%, #fce7f3 0%, transparent 50%),
+                radial-gradient(at 100% 100%, #e0f2fe 0%, transparent 50%),
+                radial-gradient(at 0% 100%, #f5f3ff 0%, transparent 50%);
+    background-color: #ffffff;
+    background-attachment: fixed;
+    color: var(--text-sepia);
+    font-family: 'Cormorant Garamond', serif;
     margin: 0;
-    line-height: 1.8;
+}
+
+/* Animated Glimmer Overlay */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 10;
 }
 
 nav {
-    background: rgba(0,0,0,0.7);
-    padding: 20px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    gap: 30px;
 }
 
 nav a {
-    color: var(--gold);
     text-decoration: none;
-    margin: 0 15px;
+    color: var(--text-sepia);
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 0.8rem;
     letter-spacing: 2px;
-    text-transform: uppercase;
+    transition: 0.3s;
 }
 
-.glimmer-card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(212, 175, 55, 0.2);
-    padding: 40px;
-    border-radius: 20px;
-    margin: 40px auto;
-    max-width: 900px;
-    box-shadow: var(--glow);
-}
-
-.magic-glow::after {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: radial-gradient(circle, rgba(212,175,55,0.1) 0%, transparent 70%);
-    pointer-events: none;
-}
-
-.hero {
-    height: 80vh;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.logo-glow {
-    filter: drop-shadow(0 0 15px var(--gold));
-    width: 250px;
-}
-
-h1, h2, h3 {
+nav a:hover {
     color: var(--gold);
-    text-shadow: var(--glow);
-    text-align: center;
+    text-shadow: 0 0 10px white;
 }
 
-input, textarea, select {
-    background: rgba(255,255,255,0.1);
-    border: 1px solid var(--gold);
-    color: white;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
+/* Intricate Ethereal Cards */
+.ethereal-panel {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+    border-radius: 100px 10px 100px 10px; /* Unique Arched Shape */
+    padding: 80px 40px;
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+h1, h2 {
+    font-family: 'Cinzel Decorative', serif;
+    color: #bfa37e;
+    font-weight: 300;
+    letter-spacing: 5px;
+}
+
+.script-font {
+    font-family: 'Dancing Script', cursive;
+    color: #d1a67a;
+    font-size: 2.5rem;
+}
+
+/* Photo Frames with Glimmer */
+.photo-frame {
+    border-radius: 50% 50% 0 0;
+    border: 2px solid white;
+    box-shadow: 0 0 30px rgba(243, 210, 122, 0.4);
+    margin: 20px;
+    transition: 0.5s;
+    object-fit: cover;
+}
+
+.photo-frame:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+input, textarea {
+    background: rgba(255,255,255,0.5);
+    border: 1px solid #e2d1c3;
+    padding: 15px;
+    border-radius: 30px;
+    font-family: inherit;
+    width: 80%;
+    margin: 10px 0;
 }
 
 button {
-    background: var(--gold);
-    color: var(--midnight);
+    background: linear-gradient(to right, #f3d27a, #fce7f3);
     border: none;
-    padding: 15px;
+    padding: 15px 40px;
+    border-radius: 40px;
+    font-family: 'Cinzel Decorative';
     cursor: pointer;
-    font-weight: bold;
-    text-transform: uppercase;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
